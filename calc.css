@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+  background: rgb(24, 24, 24);
+}
+
+h1 {
+  font-size: 70px;
+  margin: 1rem 0;
+  text-align: center;
+  color: rgb(46, 45, 45);
+}
+
+.calc {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 388px;
+  box-shadow: -1px 2px 18px 3px rgba(0,0,0,0.65);
+}
+
+.calcInner .calc-head {
+  padding: 1rem;
+  height: 200px;
+  display: grid;
+  align-content: space-between;
+  background: white;
+  text-align: right;
+}
+
+.calc-head .calc-add {
+  width: 100%; 
+  overflow-x: scroll;
+}
+
+.calc-add:hover::-webkit-scrollbar-track, 
+.calc-add:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.calc-add::-webkit-scrollbar {
+  height: 4px;
+}
+
+.calc-add::-webkit-scrollbar-thumb {
+  height: 4px;
+  background-color: #686767;
+  visibility: hidden;
+  transition: all .5s ease;
+}
+
+.calc-add::-webkit-scrollbar-track {
+  height: 4px;
+  background-color: #dfdfdf;
+  visibility: hidden;
+  transition: all .5s ease;
+}
+
+.calc-head .calc-add #calc-add__inner {
+  letter-spacing: .1rem;
+  height: 40px;
+  font-size: 30px;
+  width: 5000px;
+  background: #f7f7f7;
+}
+
+.calc-head #calc-total {
+  letter-spacing: .1rem;
+  line-height: 135px;
+  height: 88px;
+  font-size: 50px;
+}
+
+.calcInner .calc-body__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 97px);
+  grid-template-rows: repeat(5, 72px);
+  padding-top: .1rem;
+}
+
+.calc-body__inner .calc-item {
+  width: 100%;
+  line-height: 72px;
+  align-self: center;
+  text-align: center;
+  font-size: 25px;
+  border: 1px solid  rgb(44, 44, 44);
+  color: #fff;
+  background: rgb(24, 24, 24);
+  transition: all .3s ease;
+}
+
+.calc-item:nth-child(4n) {
+  background: rgb(146, 12, 199);
+  font-size: 35px;
+}
+
+.calc-item:last-child {
+  background: yellow;
+  color: #000;
+  font-size: 40px;
+}
+
+.calc-item:hover {
+  background: rgb(39, 39, 39);
+}
+
+.calc-item:nth-child(4n):hover {
+  background: rgb(146, 12, 199);
+}
+
+.calc-item:last-child:hover {
+  background: yellow;
+}
+
